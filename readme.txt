@@ -4,9 +4,9 @@ Git is free software.
 常用命令：
 1.掌握工作区的状态(是否有文件被修改
 	git status
-2.把文件添加到仓库
+2.把文件添加到仓库 (把文件修改添加到暂存区)
 	git add 1.txt 2.txt
-3.把文件提交到仓库
+3.把文件提交到仓库 (把暂存区的所有内容提交到当前分支)
 	git commit -m "说明"
 4.查看未提交版本与提交版本的区别
 	git diff file.txt
@@ -18,5 +18,10 @@ Git is free software.
 	git reset --hard d862fa
 8.得到你的每一次提交回退命令
 	git reflog
-
+9.撤销工作区的全部修改(未添加到暂存区)，回到上一次add或者commit之后的状态，
+--一定要，checkout不带--则表示切换分支
+	git checkout -- file.txt
+10.撤销暂存区的修改,HEAD表示最新到版本(已经提交到分支)
+	git reset HEAD file.txt
+11.删除文件
 
